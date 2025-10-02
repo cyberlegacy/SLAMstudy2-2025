@@ -1,31 +1,30 @@
 ## Slambook2
-![titlepage](./figures/title.png)
+# My Learning Journey with "Visual SLAM Fourteen Lectures" (slambook2)
 
-Welcome to Slambook 2nd Edition! This is the codebase of our book. Here are some relavant links if you need them: 
-- [Our book at jd.com](https://item.jd.com/12666058.html)
-- [Our book at douban.com](https://book.douban.com/subject/27028215/) (I'll be happy to get a score at douban)
-- [code of slambook version 1](https://github.com/gaoxiang12/slambook)
-- [slambook in English](https://github.com/gaoxiang12/slambook-en) (Still on going)
+This repository contains my personal study notes and code implementations while working through the second edition of the excellent book, *Visual SLAM Fourteen Lectures* (视觉SLAM十四讲).
 
-Email me if you have any questions: gao.xiang.thu at gmail dot com. Or send a issue at github if your question is about the code.
-
-Errata will be updated at this code base.
-
-Hope you like this book.
-
-BaiduYun backup link in case your github is very slow (common in China): [here](https://pan.baidu.com/s/1XQwpnDb3BOvxXZhL-03p3w)
+The primary goal of this repository is for my own learning. As part of this process, I have refactored the original project's build system to use modern, portable CMake best practices. This makes the code easier to compile and manage in modern development environments like CLion or VS Code (Cursor).
 
 ---
-## 视觉SLAM十四讲：从理论到实践 第二版
-欢迎来到视觉SLAM十四讲：从理论到实践。这里存放本书对应的代码文件。以下是一些可能对你有用的链接：
-- [京东书籍链接](https://item.jd.com/12666058.html)
-- [第一版书代码](https://github.com/gaoxiang12/slambook)
-- [英文版代码](https://github.com/gaoxiang12/slambook-en) (正在翻译中)
 
-如果您对书籍内容有疑问，请给我发送邮件。如果对代码有疑问，请点击上方的issue链接新建issues。我会不定期查看和回复（抱歉我可能无法回复所有问题和邮件）。
+## Acknowledgments
 
-勘误表会更新到代码库中。
+A huge thank you to the original author, Dr. Gao Xiang (高翔), for this fantastic book and the accompanying source code. This work would not be possible without his effort.
 
-希望您喜欢本书。
+The original, official repository can be found here: **[gaoxiang12/slambook2](https://github.com/gaoxiang12/slambook2)**
 
-本代码的百度云备份（如果您的github速度非常慢）[下载链接](https://pan.baidu.com/s/1XQwpnDb3BOvxXZhL-03p3w).
+---
+
+## Key Modifications
+
+The core logic of the SLAM algorithms remains untouched. The main changes are focused on the build system and project structure:
+
+* **Modern CMake Structure**: The entire project has been refactored to use a modern, target-based CMake approach.
+* **Centralized Dependency Management**: All dependencies (Eigen, Pangolin, etc.) are now found once in the top-level `CMakeLists.txt` and are linked to specific targets as needed.
+* **Improved Portability**: Removed all hardcoded system paths to ensure the project can be built on different machines without modification.
+* **IDE-Friendly**: The new structure is fully compatible with modern IDEs, providing correct code completion, indexing, and debugging support.
+* **C++17 Standard**: The project is configured to use the C++17 standard.
+
+---
+---
+
